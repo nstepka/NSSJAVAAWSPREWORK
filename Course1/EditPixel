@@ -1,0 +1,14 @@
+//Not sure its working as required...
+//https://www.coursera.org/learn/duke-programming-web/supplement/XwS1Y/try-it-using-for-loops
+
+var img = new SimpleImage(20,20);
+print(img);
+
+for(var pixel of img.values()){
+    
+    change.setGreen(255);
+    change.setBlue(0);
+    change.setRed(255);
+}
+
+print(change);
