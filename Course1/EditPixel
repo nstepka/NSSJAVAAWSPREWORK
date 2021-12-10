@@ -1,14 +1,13 @@
-//Not sure its working as required...
 //https://www.coursera.org/learn/duke-programming-web/supplement/XwS1Y/try-it-using-for-loops
-
+//CHange the image colors pixel by pixel.
 var img = new SimpleImage(20,20);
 print(img);
 
 for(var pixel of img.values()){
     
-    change.setGreen(255);
-    change.setBlue(0);
-    change.setRed(255);
+    pixel.setGreen(255);
+    pixel.setBlue(0);
+    pixel.setRed(255);
 }
 
-print(change);
+print(img);
