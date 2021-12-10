@@ -1,3 +1,5 @@
+
+//add three strings
 function phrase3words(value1, value2, value3) {
     var answer = value1 + " " + value2 + " " + value3;  
     return answer;
@@ -9,3 +11,16 @@ var result2 = phrase3words("everyone","wave", "back");
 print(result2);
 var result3 = phrase3words("coding","is", "fun");
 print(result3);
+
+
+//Reorg last name to be Rodger, Susan
+
+function reformatName(first, last) {
+    var updatedName = last + ", " + first;
+    return updatedName
+}
+
+var result = reformatName("Susan", "Rodger");
+print(result);
+result = reformatName("Robert", "Duvall");
+print(result);
