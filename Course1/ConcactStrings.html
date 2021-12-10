@@ -24,3 +24,55 @@ var result = reformatName("Susan", "Rodger");
 print(result);
 result = reformatName("Robert", "Duvall");
 print(result);
+
+
+
+//Get the number of Pixel in an IMG
+function numberPixels(namefile) {
+    var someImg = new SimpleImage(namefile);
+    var height = someImg.getHeight(); 
+    var width = someImg.getWidth();
+    return height * width;
+}
+
+var result = numberPixels("chapel.png");
+print(result);
+result = numberPixels("dinos.png");
+print(result);
+
+
+
+//Write a function named perimeter that calculates the number of pixels in the perimeter of an image. 
+//The perimeter is the number of pixels on the edge of the image, from all four sides. 
+//The function perimeter has one parameter named imageName, which is a string that is the name of an image file. 
+//This function calculates and returns the perimeter in the specified image filename.
+function perimeter(imageName) {
+    var someImg = new SimpleImage(imageName);
+    var height = someImg.getHeight(); 
+    var width = someImg.getWidth();
+    return height + height + width + width;
+    
+}
+
+print(perimeter("rodger.png"));
+
+
+
+//Write a function named printPixel that prints the red, blue and green values of a pixel,
+//in that order, one on each line, and identifies each one.  The function printPixel has three parameters,
+//namefile, which is a string that is the name of an image file, and xpos and ypos that are numbers
+//representing the x and y coordinates of the pixel location. Consider using the SimpleImage methods
+//getRed, getGreen, and getBlue. Since this function is printing values, it does not need a return statement.
+function printPixel(nameImage, xpos, ypos) {
+    var someImg = new SimpleImage(nameImage);
+    
+    var red= someImg.getRed(xpos, ypos);
+    var blue= someImg.getBlue(xpos, ypos);
+    var green= someImg.getGreen(xpos, ypos);
+    print(red);
+    print(green);
+    print(blue);
+}
+
+printPixel("drewgreen.png",10, 10);
+printPixel("drewgreen.png",250, 500);
