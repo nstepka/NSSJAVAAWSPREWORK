@@ -76,3 +76,25 @@ function printPixel(nameImage, xpos, ypos) {
 
 printPixel("drewgreen.png",10, 10);
 printPixel("drewgreen.png",250, 500);
+
+
+
+//Write a function named sumPixel that calculates and returns the sum of the red, 
+//blue and green values of a pixel.  The function sumPixel has three parameters, 
+//namefile, which is a string that is the name of an image file, and xpos and ypos
+//that are numbers representing the x and y coordinates of the pixel location. 
+//Since this function is returning a value, it should NOT have a print statement 
+//in the function, and it should have a return statement. 
+function sumPixel(nameOfImage, xpos, ypos){
+   var someImg = new SimpleImage(nameOfImage);
+    
+    var red= someImg.getRed(xpos, ypos);
+    var blue= someImg.getBlue(xpos, ypos);
+    var green= someImg.getGreen(xpos, ypos);
+   return (red+blue+green);
+}
+
+var answer = sumPixel("drewgreen.png", 250, 500);
+print(answer);
+answer = sumPixel("drewgreen.png",10, 10);
+print(answer);
