@@ -1,0 +1,20 @@
+// Split an image in 3 and do amp up red in the first 3rd, green in the second and blue in the third
+//make sure to use getHieght() and getWidth() before hand to find out the size of the image.
+var image = new SimpleImage("hilton.jpg");
+
+function 
+for( var pixel of image.values()){
+    if(pixel.getX() < 47){
+        pixel.setRed(255);
+    }
+    
+    if(pixel.getX() < 102 && pixel.getX() > 46){
+        pixel.setGreen(255);
+    }
+    if(pixel.getX() < 210 && pixel.getX() > 102){
+        pixel.setBlue(255);
+    }
+}
+
+
+print(image);
