@@ -2,7 +2,8 @@
 //make sure to use getHieght() and getWidth() before hand to find out the size of the image.
 var image = new SimpleImage("hilton.jpg");
 
-function 
+var width = image.getHeight();
+//140
 for( var pixel of image.values()){
     if(pixel.getX() < 47){
         pixel.setRed(255);
@@ -11,7 +12,7 @@ for( var pixel of image.values()){
     if(pixel.getX() < 102 && pixel.getX() > 46){
         pixel.setGreen(255);
     }
-    if(pixel.getX() < 210 && pixel.getX() > 102){
+    if(pixel.getX() < 140 && pixel.getX() > 102){
         pixel.setBlue(255);
     }
 }
