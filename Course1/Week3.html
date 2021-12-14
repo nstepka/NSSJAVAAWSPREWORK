@@ -1,5 +1,28 @@
-//problem one
+//https://www.coursera.org/learn/duke-programming-web/supplement/4x9Bk/programming-exercise-advanced-modifying-images
 
+
+//Write the green screen algorithm you saw in the lecture video yourself. 
+//To make sure you really understand the code that was written in the video,
+//you should write the code yourself without looking at the video unless you
+//get stuck and need to refer back to it for a hint. 
+
+var fgImage = new SimpleImage("drewRobert.png");
+var bgImage = new SimpleImage("dinos.png");
+var output = new SimpleImage(fgImage.getWidth(), fgImage.getHeight());
+print('hi');
+for(var pixel of fgImage.values()){
+    
+    if(pixel.getGreen() > pixel.getRed() + pixel.getBlue()){
+        var x = pixel.getX();
+        var y = pixel.getY();
+        var bgPixel = bgImage.getPixel(x,y);
+        output.setPixel(x,y,bgPixel);
+    }
+    else {
+        output.setPixel(pixel.getX(), pixel.getY(), pixel);
+    }
+}
+print(output);
 
 //Your friend is trying to write a program that draws a square 200 pixels by 200 pixels
 //and that looks like this square with colors red (red value 255), green (green value 255),
