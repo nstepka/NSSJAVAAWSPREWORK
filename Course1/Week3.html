@@ -1,0 +1,26 @@
+//problem one
+
+
+//Your friend is trying to write a program that draws a square 200 pixels by 200 pixels
+//and that looks like this square with colors red (red value 255), green (green value 255),
+//blue (blue value 255) and magenta (red value 255 and blue value 255). All other RGB
+//values are set to 0.
+
+var image1 = new SimpleImage(200,200);
+
+for (var pixel of image1.values()) {
+    var x = pixel.getX();
+    var y = pixel.getY();
+    if (x<100 & y<100)
+        pixel.setRed(255);
+    else if (x>=100 & y<100)
+        pixel.setGreen(255);
+    else if (x<100 & y>=100) {
+        pixel.setRed(255);
+        pixel.setBlue(255);
+    }
+    else 
+        pixel.setBlue(255);
+}
+print(image1);
+
