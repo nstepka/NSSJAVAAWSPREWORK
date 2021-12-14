@@ -1,3 +1,6 @@
+//exerises from https://www.coursera.org/learn/duke-programming-web/supplement/xApiL/programming-exercise-modifying-images
+
+
 // Split an image in 3 and do amp up red in the first 3rd, green in the second and blue in the third
 //make sure to use getHieght() and getWidth() before hand to find out the size of the image.
 var image = new SimpleImage("hilton.jpg");
@@ -19,3 +22,24 @@ for( var pixel of image.values()){
 
 
 print(image);
+
+
+//Write code to change the Duke blue devil (the image below on the left) to be yellow (as in the image below on the right). 
+// write your code here
+var image = new SimpleImage("duke_blue_devil.png");
+
+
+print(image);
+
+
+for( var pixel of image.values()){
+    if(pixel.getBlue() > pixel.getRed() ){
+        pixel.setBlue(0);
+        pixel.setRed(255);
+        pixel.setGreen(255);
+    }
+}
+
+
+print(image);
+
