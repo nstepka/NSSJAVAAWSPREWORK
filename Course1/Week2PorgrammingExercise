@@ -5,8 +5,8 @@
 //make sure to use getHieght() and getWidth() before hand to find out the size of the image.
 var image = new SimpleImage("hilton.jpg");
 
-var width = image.getHeight();
-//140
+var width = image.getHeight();//140
+
 for( var pixel of image.values()){
     if(pixel.getX() < 47){
         pixel.setRed(255);
@@ -20,26 +20,25 @@ for( var pixel of image.values()){
     }
 }
 
-
 print(image);
 
 
 //Write code to change the Duke blue devil (the image below on the left) to be yellow (as in the image below on the right). 
-// write your code here
 var image = new SimpleImage("duke_blue_devil.png");
 
-
 print(image);
 
+print(reduceBlueAddYellow(image));
 
-for( var pixel of image.values()){
-    if(pixel.getBlue() > pixel.getRed() ){
-        pixel.setBlue(0);
-        pixel.setRed(255);
-        pixel.setGreen(255);
+function reduceBlueAddYellow(image){  
+    for( var pixel of image.values()){
+        if(pixel.getBlue() > pixel.getRed() ){
+            pixel.setBlue(0);
+            pixel.setRed(255);
+            pixel.setGreen(255);
+        }
     }
+    return image;
 }
 
-
 print(image);
-
