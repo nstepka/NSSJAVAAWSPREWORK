@@ -2,8 +2,8 @@
 /**
  * Write a description of AllCodons here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Nicholas Stepka
+ * @version 1.0
  */
 public class AllCodons {
     public int findStopCodon(String dnaStr, int startIndex, String stopCodon){
