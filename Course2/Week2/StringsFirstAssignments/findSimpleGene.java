@@ -69,29 +69,20 @@ public class findSimpleGene {
     }
 
     
-    //NOT FINISHED!!!!
-    public String part4(){
-        //int start = dna.toLowerCase().indexOf("atg");
-        //int stop = dna.toLowerCase().indexOf("tag", start + 3);
-        
-        URLResource ul = new URLResource("https://www.dukelearntoprogram.com//course2/data/manylinks.html");
-        String url = ul.asString();
-        String urlCopy = url;
-        int start = urlCopy.indexOf("youtube.com");
-        int stop = urlCopy.indexOf('"', start+4);
-        String firstYT = urlCopy.substring(start);
-        System.out.println(urlCopy.substring(start,stop));
-        
-//        String urlLowerCase = ul.asString();
-//        urlLowerCase = urlLowerCase.toLowerCase();
-//        int firstYT = url.indexOf("youtube.com");
-//        //System.out.println(firstYT);//6821
-//        int endCom = url.indexOf("youtube.com", firstYT+20);
-//        System.out.println("hello");
-//        System.out.println(url.indexOf("youtube.com", 20));
-        
-        return "";
+   
+    //Part4
+    public void findLinks(String url) {
+        URLResource urlResource = new URLResource(url);
+        for (String line : urlResource.lines()) {
+            int youtubeIndex = line.toLowerCase().indexOf("youtube.com"); // Index where youtube.com starts
+            if (youtubeIndex != -1) {
+                int startIndex = line.lastIndexOf("\"", youtubeIndex); // Index of '"' just before youtube.com
+                int endIndex = line.indexOf("\"", youtubeIndex); // Index of '"' just after youtube.com
+                System.out.println("Youtube Link = " + line.substring(startIndex + 1, endIndex));
+            }
+        }
     }
+
 
     public void testingLastPart(){
         System.out.println("Answer should be ana: " +lastPart("an","banana"));
@@ -152,6 +143,7 @@ public class findSimpleGene {
         //sg.testingFindProteinWithIndex();
         //sg.testingtwoOccurrences();
         //sg.testingLastPart();
-        sg.part4();
+        String url = "https://www.dukelearntoprogram.com//course2/data/manylinks.html";
+        sg.findLinks(url);
     }
 }
