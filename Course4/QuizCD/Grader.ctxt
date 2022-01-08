@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Grader
+comment0.text=\r\n\ Write\ a\ description\ of\ Grader\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=student
+comment1.target=void\ addStudent(Student)
+comment2.params=id
+comment2.target=LetterGrade\ getLetterGrade(java.lang.String)
+comment3.params=studentID\ quiz
+comment3.target=int\ administer(java.lang.String,\ Quiz)
+numComments=4

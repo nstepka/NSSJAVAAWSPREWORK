@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Quiz
+comment1.params=
+comment1.target=Question[]\ getQuestions()
+comment2.params=
+comment2.target=int\ administer()
+comment2.text=\r\n\ In\ a\ real\ implementation,\ this\ would\ print\ questions\ and\ four\ randomly\r\n\ selected\ answers\ (3\ wrong\ and\ 1\ right),\ get\ the\ user's\ choice,\ and\r\n\ return\ how\ many\ questions\ the\ user\ answered\ correctly.\r\n\r\n\ In\ this\ implementation,\ we\ skip\ all\ that\ hard\ stuff\ and\ just\ return\ a\r\n\ random\ number.\r\n\r\n\ @return\ The\ number\ of\ questions\ the\ user\ answered\ correctly.\r\n
+comment3.params=
+comment3.target=int\ getNumberOfQuestions()
+comment4.params=question
+comment4.target=void\ addQuestion(Question)
+numComments=5

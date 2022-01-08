@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Question
+comment1.params=text\ correctAnswer\ wrongAnswers
+comment1.target=Question(java.lang.String,\ Answer,\ Answer[])
+comment2.params=answer
+comment2.target=void\ addWrongAnswer(Answer)
+comment3.params=
+comment3.target=java.lang.String\ getText()
+comment4.params=
+comment4.target=Answer\ getCorrectAnswer()
+comment5.params=
+comment5.target=Answer[]\ getWrongAnswers()
+numComments=6

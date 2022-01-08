@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=LetterGrade
+comment0.text=\r\n\ Write\ a\ description\ of\ LetterGrade\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=minPercent
+comment1.target=LetterGrade(double)
+comment2.params=
+comment2.target=java.lang.Double\ getMinimumPercent()
+numComments=3
